@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_medium2"
+        android:layout_marginTop="@dimen/margin_medium2"
+        android:layout_marginEnd="@dimen/margin_medium2"
+        android:background="@drawable/background_search">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_medium2"
+            app:srcCompat="@drawable/ic_baseline_search_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/etSearch"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/ivSearch"
+            android:hint="Search Play Books"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+        <com.attt.thelibraryapp.components.RoundedCornerImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_medium2"
+            android:layout_toEndOf="@+id/etSearch"
+            android:scaleType="centerCrop"
+            app:cornerRadius="15dp"
+            app:srcCompat="@drawable/profile" />
+
+    </RelativeLayout>
+    <alirezat775.lib.carouselview.CarouselView
+        android:id="@+id/rlCarousel"
+        android:layout_below="@id/rlSearch"
+        android:layout_marginStart="@dimen/margin_medium2"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tlBooks"
+        android:layout_below="@+id/rlCarousel"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
